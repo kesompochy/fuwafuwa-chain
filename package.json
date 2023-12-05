@@ -1,0 +1,19 @@
+{
+  "name": "fuwafuwa-chain",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run ./src/index.ts",
+    "build": "docker compose build",
+    "dev": "docker compose up -d",
+    "restart": "docker compose restart",
+    "recreate": "docker compose up -d --force-recreate",
+    "logs": "docker compose logs -f"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
