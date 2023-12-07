@@ -20,8 +20,7 @@ services:
     container_name: node2
     environment:
       - PORT=3000
-      - INITIAL_PEER_ADDRESS=node1
-      - INITIAL_PEER_PORT=3000
+      - INITIAL_NODE_ENDPOINT=node1:3000
   node3:
     build: .
     ports:
@@ -33,5 +32,4 @@ services:
     container_name: node3
     environment:
       - PORT=3000
-      - INITIAL_PEER_ADDRESS=node1
-      - INITIAL_PEER_PORT=3000
+      - INITIAL_NODE_ENDPOINT=node1:3000
