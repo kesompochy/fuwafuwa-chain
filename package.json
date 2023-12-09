@@ -8,7 +8,9 @@
     "dev": "docker compose up -d",
     "restart": "docker compose restart",
     "recreate": "docker compose up -d --force-recreate",
-    "logs": "docker compose logs -f"
+    "logs": "docker compose logs | sort -r -k 3",
+    "logsf": "docker compose logs --timestamps -f",
+    "stop": "docker compose stop"
   },
   "devDependencies": {
     "bun-types": "latest"

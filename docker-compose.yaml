@@ -9,6 +9,8 @@ services:
     container_name: node1
     environment:
       - PORT=3000
+      - SELF_ENDPOINT=node1:3000
+      - GENESIS_ADDRESS=azarashi
   node2:
     build: .
     ports:
@@ -21,6 +23,7 @@ services:
     environment:
       - PORT=3000
       - INITIAL_NODE_ENDPOINT=node1:3000
+      - SELF_ENDPOINT=node2:3000
   node3:
     build: .
     ports:
@@ -33,3 +36,4 @@ services:
     environment:
       - PORT=3000
       - INITIAL_NODE_ENDPOINT=node1:3000
+      - SELF_ENDPOINT=node3:3000
